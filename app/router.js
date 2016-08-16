@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('contact');
   this.route('announcement', {path: '/announcement/:announcement_id'});
   this.route('rental', {path: '/rental/:rental_id'});
+  this.route('city', {path: '/city/:city_id'});
 });
 
 export default Router;
