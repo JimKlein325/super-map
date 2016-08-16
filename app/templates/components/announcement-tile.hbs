@@ -1,4 +1,5 @@
 <li>
-  {{announcement.title}} {{announcement.body}}
-  <button {{action 'delete' announcement}}>Delete</button>
+  {{#link-to 'announcement' announcement.id}} {{announcement.title}}{{/link-to}}
 </li>
+<!-- {{update-announcement announcement=announcement update="update"}} -->
+<!-- <button {{action 'deleteAnnouncement' announcement}}>Delete</button> -->

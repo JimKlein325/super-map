@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       announcements: this.store.findAll('announcement'),
-      rentals: this.store.findAll('rental')
+      rentals: this.store.findAll('rental'),
+      cities: this.store.findAll('city')
     });
   },
 
@@ -19,13 +20,5 @@ export default Ember.Route.extend({
       newAnnouncement.save();
       this.transitionTo('index');
     },
-    destroyRental(rental) {
-      rental.destroyRecord();
-      this.transitionTo('index');
-    },
-    destroyAnnouncement(announcement) {
-      announcement.destroyRecord();
-      this.transitionTo('index');
-    }
   }
 });

@@ -1,9 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  updateAnnouncementForm: false,
   actions: {
-  delete(announcement) {
-    this.sendAction('destroyAnnouncement', announcement);
+    updateAnnouncement(announcement, announcementParams) {
+      this.sendAction('updateAnnouncement', announcement, announcementParams);
+    },
+    deleteAnnouncement(announcement) {
+      this.sendAction('destroyAnnouncement', announcement);
     }
   }
 });
