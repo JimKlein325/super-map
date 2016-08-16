@@ -20,5 +20,11 @@ export default Ember.Route.extend({
       newAnnouncement.save();
       this.transitionTo('index');
     },
+
+    citySave3(cityParams) {
+      var newCity = this.store.createRecord('city', cityParams);
+      newCity.save();
+      this.transitionTo('index');
+    }
   }
 });

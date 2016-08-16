@@ -14,9 +14,11 @@
 <h1>Cities:</h1>
 <ul>
   {{#each model.cities as |city|}}
-    <li>{{city-tile city=city}}</li>
+    <li>{{city-tile city=city updateCity="updateCity" destroyCity="destroyCity"}}</li>
   {{/each}}
 </ul>
+
+{{new-city citySave2="citySave3"}}
 
 <h1>Announcements:</h1>
 <ul>
